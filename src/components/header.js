@@ -1,35 +1,88 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faTwitter,
+  faFacebookSquare,
+  faInstagram,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import "./header.css"
+
+const Header = () => {
+  const [isMenuOpened, setMenuOpened] = useState(false)
+  return (
+    <header>
+      <button
+        className="menuIcon"
+        onClick={() => {
+          setMenuOpened(isMenuOpened ? false : true)
+          document.body.style.overflow = isMenuOpened ? "auto" : "hidden"
+        }}
+      >
+        <div
+          className={`bar ${
+            isMenuOpened ? "bar--menu-opened" : "bar--menu-closed"
+          }`}
+        ></div>
+      </button>
+      <ul className={`list ${isMenuOpened ? "list--opened" : "list--closed"}`}>
+        <li>
+          <Link
+            to="/"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/products"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
+            Products
+          </Link>
+        </li>
+        <li className="icon">
+          <a href="http://triplea.gq/twitter">
+            <FontAwesomeIcon icon={faTwitter} size="lg" />
+          </a>
+        </li>
+        <li className="icon">
+          <a href="http://triplea.gq/facebook">
+            <FontAwesomeIcon icon={faFacebookSquare} size="lg" />
+          </a>
+        </li>
+        <li className="icon">
+          <a href="http://triplea.gq/instagram">
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
+          </a>
+        </li>
+        <li className="icon">
+          <a href="http://triplea.gq/discord">
+            <FontAwesomeIcon icon={faDiscord} size="lg" />
+          </a>
+        </li>
+      </ul>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
