@@ -119,6 +119,10 @@ header .menuIcon {
     left: 100vw;
   }
 
+  header {
+    margin: 16px;
+  }
+
   header .menuIcon {
     display: block;
   }
