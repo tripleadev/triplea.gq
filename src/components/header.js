@@ -60,24 +60,44 @@ const Header = () => {
           </Link>
         </li>
         <li className="icon">
-          <a href="http://triplea.gq/twitter">
+          <Link
+            to="/twitter"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
             <FontAwesomeIcon icon={faTwitter} size="lg" />
-          </a>
+          </Link>
         </li>
         <li className="icon">
-          <a href="http://triplea.gq/facebook">
+          <Link
+            to="/facebook"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
             <FontAwesomeIcon icon={faFacebookSquare} size="lg" />
-          </a>
+          </Link>
         </li>
         <li className="icon">
-          <a href="http://triplea.gq/instagram">
+          <Link
+            to="/instagram"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
             <FontAwesomeIcon icon={faInstagram} size="lg" />
-          </a>
+          </Link>
         </li>
         <li className="icon">
-          <a href="http://triplea.gq/discord">
+          <Link
+            to="/discord"
+            onClick={() => {
+              document.body.style.overflow = "auto"
+            }}
+          >
             <FontAwesomeIcon icon={faDiscord} size="lg" />
-          </a>
+          </Link>
         </li>
       </ul>
     </header>

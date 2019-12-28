@@ -20,6 +20,10 @@ header {
   font-size: 1.1em;
 }
 
+.list li :hover {
+  color: #444;
+}
+
 .list a {
   text-decoration: none;
   color: black;
@@ -94,7 +98,7 @@ header .menuIcon {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .list {
     position: fixed;
     top: 0;

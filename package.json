@@ -26,9 +26,9 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-		"triplea",
-		"triplea.gq",
-		"tripleadev"
+    "triplea",
+    "triplea.gq",
+    "tripleadev"
   ],
   "license": "MIT",
   "scripts": {
