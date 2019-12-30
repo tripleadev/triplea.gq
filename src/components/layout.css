@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&display=swap");
 
 html {
   font-family: "Nunito Sans", sans-serif;
@@ -35,13 +35,12 @@ h1 {
 }
 
 footer {
-  position: absolute;
   width: 100%;
   text-align: center;
   margin: 20px 0;
   font-size: 0.9em;
+  font-weight: 200;
   bottom: 0;
-  left: 0;
 }
 
 @media screen and (max-width: 479px) {
