@@ -1,18 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-// const Box = styled.span`
-//   box-shadow: 0px 0px 20px 0px #00000050;
-//   border-radius: 5px;
-//   padding: 1em;
-//   margin: 10px;
-// `
-
 const Box = styled.div`
   box-shadow: 0px 0px 20px 0px #00000050;
   border-radius: 5px;
-  padding: 1em;
-  margin: 10px;
+  padding: 1.5em;
 `
 
 const Image = styled.img`
@@ -22,19 +14,28 @@ const Image = styled.img`
 `
 
 const Name = styled.h2`
-  margin: 0.5em 0;
+  margin-top: 0.5em;
   font-weight: 200;
+`
+
+const Email = styled.h4`
+  margin-bottom: 1em;
+  font-weight: 200;
+  color: black;
 `
 
 const About = styled.p`
   font-weight: 200;
 `
 
-const Card = ({ photo, name, children }) => {
+const Card = ({ photo, name, email, children }) => {
   return (
     <Box>
       <Image src={photo} alt={name} />
       <Name>{name}</Name>
+      <a href={`mailto:${email}@triplea.gq`}>
+        <Email>{`${email}@triplea.gq`}</Email>
+      </a>
       <About>{children}</About>
     </Box>
   )
