@@ -69,3 +69,7 @@ yarn-error.log
 .yarn-integrity
 
 .idea
+
+yarn.lock
+
+package-lock.json
