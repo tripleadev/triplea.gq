@@ -27,14 +27,15 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-htaccess`,
+      resolve: "gatsby-plugin-htaccess",
       options: {
-        RewriteBase: "/",
         https: true,
+        www: false,
         host: "triplea.gq",
         ErrorDocument: `
-          ErrorDocument 404 /404/
+          ErrorDocument 404 /404.html
         `,
       },
     },

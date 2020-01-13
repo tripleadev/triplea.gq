@@ -31,6 +31,14 @@ const Paragraph = styled.p`
   margin: 1.5em 0;
 `
 
+const NoClick = styled.div`
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+`
+
 const emojis = [
   "🙃",
   "🤔",
@@ -65,7 +73,7 @@ const NotFoundPage = () => {
     <Layout>
       <SEO title="4-oh-4" />
       <Wrapper>
-        <div onClick={getEmoji} onKeyPress={getEmoji} role="presentation">
+        <NoClick onClick={getEmoji} onKeyPress={getEmoji} role="presentation">
           <Emoji>
             <span id="emoji" role="img" aria-label="Sad Face :(">
               {emojis[Math.floor(Math.random() * emojis.length)]}
@@ -77,7 +85,7 @@ const NotFoundPage = () => {
             Sorry, we couldn't find the page you're looking for... <br />
             Maybe it doesn't exist? 🤔
           </Paragraph>
-        </div>
+        </NoClick>
       </Wrapper>
     </Layout>
   )
