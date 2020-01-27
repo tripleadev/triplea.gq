@@ -1,8 +1,15 @@
 header {
-  background: white;
-  margin: 0 auto;
+  background: #2a2633;
+  box-shadow: 0px 0px 10px 5px #00000050;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+
+.wrapper {
   width: 90vw;
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 0.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +20,7 @@ header {
 }
 
 .list li {
-  color: black;
+  color: white;
   list-style-type: none;
   padding: 0.75em;
   font-weight: 300;
@@ -21,12 +28,12 @@ header {
 }
 
 .list li :hover {
-  color: #444;
+  color: rgb(196, 196, 196);
 }
 
 .list a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 header .menuIcon {
@@ -49,7 +56,7 @@ header .menuIcon {
   width: 100%;
   height: 5px;
   position: absolute;
-  background: black;
+  background: white;
   opacity: 1;
 
   left: 0;
@@ -68,7 +75,7 @@ header .menuIcon {
   width: 100%;
   height: 5px;
   position: absolute;
-  background: black;
+  background: white;
 
   content: "";
   left: 0;
@@ -102,7 +109,7 @@ header .menuIcon {
   .list {
     position: fixed;
     top: 0;
-    background: white;
+    background: #2a2633;
     width: 100vw;
     height: 100vh;
     z-index: 9;
@@ -124,7 +131,7 @@ header .menuIcon {
   }
 
   header {
-    margin: 16px;
+    padding: 16px;
   }
 
   header .menuIcon {

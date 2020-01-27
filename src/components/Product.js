@@ -6,6 +6,7 @@ const Box = styled.div`
   box-shadow: 0px 0px 20px 0px #00000050;
   border-radius: 5px;
   padding: 1.5em;
+  background-color: #fff;
 `
 
 const Image = styled.img`

@@ -29,7 +29,7 @@ const Products = styled.div`
 `
 
 const Heading = styled.h1`
-  font-weight: 200;
+  font-weight: 600;
   font-size: 2.5em;
   margin: 1em;
 `

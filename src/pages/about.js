@@ -5,6 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 
+import Artur from "../images/artur.jpeg"
+import Adam from "../images/adam.jpeg"
+import Aleksander from "../images/aleksander.jpeg"
+
 const Wrapper = styled.div`
   text-align: center;
   margin: auto;
@@ -26,14 +30,14 @@ const Cards = styled.div`
 `
 
 const Heading = styled.h1`
-  font-weight: 200;
+  font-weight: 600;
   font-size: 2.5em;
   margin: 1em;
 `
 
 const Paragraph = styled.p`
-  font-weight: 200;
-  font-size: 1.2em;
+  font-weight: 300;
+  font-size: 1.5em;
   margin-bottom: 0.5em;
 `
 
@@ -48,34 +52,26 @@ const AboutPage = () => (
       </Paragraph>
       <Paragraph>
         It was founded by three students: Artur, Adam, and Aleksander. Hence the
-        name - TripleA.
+        name - <i>TripleA</i>.
       </Paragraph>
     </Wrapper>
     <Wrapper>
       <Heading>Our team.</Heading>
       <Cards>
-        <Card
-          photo="https://i.imgur.com/aQI77uE.jpg"
-          name="Artur Dudek"
-          email="artur.dudek"
-        >
+        <Card photo={Artur} name="Artur Dudek" email="artur.dudek">
           Fullstack developer living in Poland. In love with web development,
           video games and a little bit addiced to YouTube and memes. Discord
           enthusiast and bot developer. Sometimes lazy but always tries to do
           his best.
         </Card>
-        <Card
-          photo="https://i.imgur.com/MbU9fGr.jpg"
-          name="Adam Siekierski"
-          email="adam.siekierski"
-        >
+        <Card photo={Adam} name="Adam Siekierski" email="adam.siekierski">
           Fullstack developer based in Poznań, Poland. Codes 24 hours a day,
           immediately learns every technology he finds out about. Always looking
           to upgrade his equpiment, currently working on a MacBook Pro. His
           second passion is cycling.
         </Card>
         <Card
-          photo="http://pronksiapartments.ee/wp-content/uploads/2015/10/placeholder-face-big.png"
+          photo={Aleksander}
           name="Aleksander Skubała"
           email="aleksander.skubala"
         >
