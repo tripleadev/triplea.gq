@@ -13,6 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: flow-root;
 }
 
 .list {
@@ -124,10 +125,12 @@ header .menuIcon {
 
   .list--opened {
     left: 0vw;
+    display: flex;
   }
 
   .list--closed {
     left: 100vw;
+    display: none;
   }
 
   header {
@@ -136,5 +139,6 @@ header .menuIcon {
 
   header .menuIcon {
     display: block;
+    float: right;
   }
 }

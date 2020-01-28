@@ -16,19 +16,18 @@ const Image = styled.img`
 
 const Name = styled.h2`
   margin: 0.5em 0 1em 0;
-  font-weight: 200;
+  font-weight: 400;
 `
 
 const About = styled.p`
-  font-weight: 200;
+  font-weight: 300;
 `
 
 const Button = styled.p`
   margin: 1em;
   color: black;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 300;
-  font-size: 1em;
+  font-weight: 400;
+  font-size: 1.1em;
   cursor: pointer;
   text-align: center;
   &:hover {

@@ -18,15 +18,9 @@ const Wrapper = styled.div`
 
 const Cards = styled.div`
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  @media (max-width: 1000px) {
-    grid-template-columns: auto auto;
-  }
-  @media (max-width: 700px) {
-    grid-template-columns: auto;
-  }
 `
 
 const Heading = styled.h1`
