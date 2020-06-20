@@ -1,50 +1,47 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
+    <nav class="nav">
+      <g-link to="/" class="nav__link">TripleA</g-link>
+      <g-link to="/contact" class="nav__link">Contact Us</g-link>
+    </nav>
     <slot/>
+    <footer>
+      <span>Copyright {{ new Date().getFullYear() }} © TripleA</span>
+    </footer>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
+<style lang="scss" scoped>
+  .layout {
+    width: 100vw;
+    min-height: 150vh;
   }
-}
-</static-query>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
+  .nav {
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 10px;
+    font-size: 1em;
+    /* justify-content: flex-end; */
+    background-color: rgba(255, 255, 255, .75);
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+    .nav__link {
+      padding-right: 10px;
+    }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
+    .nav__link:last-of-type {
+      padding-right: 0;
+    }
+  }
 
-.nav__link {
-  margin-left: 20px;
-}
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--gray4);
+  }
 </style>

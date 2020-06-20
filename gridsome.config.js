@@ -6,5 +6,14 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  titleTemplate: "%s",
+
+  plugins: [
+    /*{
+      use: 'gridsome-plugin-sass-resources-loader',
+      options: {
+        resources: '@/*',
+      }
+    }*/
+  ]
 }

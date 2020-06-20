@@ -12,3 +12,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  h1 {
+    color: var(--theme);
+  }
+</style>
