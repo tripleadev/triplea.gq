@@ -1,8 +1,8 @@
 @import './_variables.scss';
 @import './_typography.scss';
 
-body {
-  width: 100vw;
+body, html {
+  max-width: 100vw;
   min-height: 100vh;
   margin: 0;
   padding: 0;

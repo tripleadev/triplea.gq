@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <g-link to="/">
+      <g-image src="~/favicon.png" class="icon"></g-image>
+    </g-link>
     <div class="content" ref="text">
       <h2>High performance software on-demand</h2>
       <p>We would love to figure out your problems by creating software tailored to you.</p>
@@ -25,17 +28,17 @@ export default {
     const man = document.querySelector('#man')
     const tl = new TimelineLite()
 
-    tl.fromTo(text, 1.2,
+    tl.fromTo(text, 1.1,
       {x: -100, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: 0, opacity: 1, delay: 0.3, ease: Power1.easeInOut}
     )
     .fromTo(screen, 1,
       {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: 0, opacity: 0.8, ease: Power1.easeInOut}
     )
     .fromTo(man, 1,
       {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: 0, opacity: 0.8, ease: Power1.easeInOut}
     )
   },
 }
@@ -50,6 +53,14 @@ export default {
     align-items: center;
     justify-content: center;
     position: relative;
+  }
+
+  .icon {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 25px;
+    left: 25px;
   }
 
   .content {

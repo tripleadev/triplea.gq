@@ -1,11 +1,13 @@
 <template>
   <Layout>
-    <welcomeSection/>
+    <WelcomeSection/>
+    <ProductSection/>
   </Layout>
 </template>
 
 <script>
 import WelcomeSection from '../sections/WelcomeSection.vue'
+import ProductSection from '../sections/ProductSection.vue'
 
 export default {
   metaInfo: {
@@ -13,6 +15,7 @@ export default {
   },
   components: {
     WelcomeSection,
+    ProductSection,
   },
 }
 </script>
