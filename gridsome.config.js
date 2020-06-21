@@ -8,12 +8,24 @@ module.exports = {
   siteName: 'Gridsome',
   titleTemplate: "%s",
 
-  plugins: [
-    /*{
-      use: 'gridsome-plugin-sass-resources-loader',
-      options: {
-        resources: '@/*',
+  chainWebpack: config => {
+    const svgRule = config.module.rule('svg')
+    const svgoConfig = {
+      svgo: {
+        plugins: [{
+          cleanupIDs: false,
+          convertShapeToPath: false
+        }]
       }
-    }*/
+    }
+    svgRule.uses.clear()
+    svgRule
+      .use('vue-svg-loader')
+        .loader('vue-svg-loader')
+            .options(svgoConfig)
+  },
+
+  plugins: [
+
   ]
 }
