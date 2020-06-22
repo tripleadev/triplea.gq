@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <g-link to="/">
+    <g-link to="https://github.com/tripleadev">
       <g-image src="~/favicon.png" class="icon"></g-image>
     </g-link>
     <div class="content" ref="text">
@@ -34,11 +34,11 @@ export default {
     )
     .fromTo(screen, 1,
       {x: 150, opacity: 0},
-      {x: 0, opacity: 0.8, ease: Power1.easeInOut}
+      {x: 0, opacity: 1, ease: Power1.easeInOut}
     )
     .fromTo(man, 1,
       {x: 150, opacity: 0},
-      {x: 0, opacity: 0.8, ease: Power1.easeInOut}
+      {x: 0, opacity: 1, ease: Power1.easeInOut}
     )
   },
 }
