@@ -47,7 +47,7 @@ export default {
 <style lang="scss" scoped>
   .container {
     width: 100vw;
-    height: 100vh;
+    height: 108vh;
     display: flex;
     flex-direction: column;
     align-items: center;

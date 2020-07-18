@@ -58,14 +58,24 @@ export default {
   },
   mounted() {
     const { text } = this.$refs;
-    const boxes = document.querySelectorAll('.cardContainer .cardWrapper')
     const tl = new TimelineLite({ paused: true });
 
-    tl.fromTo(text, 1.1,
+    tl.fromTo(text, 0.8,
       {y: -100, opacity: 0},
-      {y: 0, opacity: 1, delay: 0.3, ease: Power1.easeInOut}
-    )
-    .fromTo(boxes[0], 0.8,
+      {y: 0, opacity: 1, delay: 0.4, ease: Power1.easeInOut}
+    );
+
+    const scrollScene = new ScrollScene({
+      triggerElement: text,
+      gsap: {
+        timeline: tl,
+      },
+    });
+
+    const boxes = document.querySelectorAll('.cardContainer .cardWrapper');
+    const tl2 = new TimelineLite({ paused: true });
+
+    tl2.fromTo(boxes[0], 0.8,
       {x: 150, opacity: 0},
       {x: 0, opacity: 1, ease: Power1.easeInOut}
     )
@@ -76,31 +86,27 @@ export default {
     .fromTo(boxes[2], 0.8,
       {x: 150, opacity: 0},
       {x: 0, opacity: 1, ease: Power1.easeInOut}
-    )
+    );
 
-    const scrollScene = new ScrollScene({
+    const scrollScene2 = new ScrollScene({
       triggerElement: boxes[0],
       gsap: {
-        timeline: tl,
+        timeline: tl2,
       },
-    })
+    });
 
     const carousel = document.querySelector('.carousel')
-    const tl2 = new TimelineLite({ paused: true });
+    const tl3 = new TimelineLite({ paused: true });
 
-    tl2.fromTo(text, 1.1,
-      {y: -100, opacity: 0},
-      {y: 0, opacity: 1, delay: 0.3, ease: Power1.easeInOut}
-    )
-    .fromTo(carousel, 0.8,
+    tl3.fromTo(carousel, 0.8,
       {x: 150, opacity: 0},
       {x: 0, opacity: 1, ease: Power1.easeInOut}
     )
 
-    const scrollScene2 = new ScrollScene({
+    const scrollScene3 = new ScrollScene({
       triggerElement: carousel,
       gsap: {
-        timeline: tl2,
+        timeline: tl3,
       },
     })
   },
