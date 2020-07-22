@@ -1,13 +1,15 @@
 <template>
   <Layout>
-    <WelcomeSection/>
-    <ProductSection/>
+    <WelcomeSection />
+    <ProductSection />
+    <ContactSection />
   </Layout>
 </template>
 
 <script>
 import WelcomeSection from '../sections/WelcomeSection.vue'
 import ProductSection from '../sections/ProductSection.vue'
+import ContactSection from '../sections/ContactSection.vue'
 
 export default {
   metaInfo: {
@@ -16,6 +18,7 @@ export default {
   components: {
     WelcomeSection,
     ProductSection,
+    ContactSection,
   },
 }
 </script>

@@ -13,7 +13,8 @@
     "sass-loader": "^8.0.2",
     "scrollmagic": "^2.0.7",
     "scrollscene": "0.0.20",
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "vue-svg-loader": "^0.16.0"
