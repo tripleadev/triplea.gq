@@ -3,7 +3,7 @@
 import '~/assets/style/main.scss'
 
 import DefaultLayout from '~/layouts/Default.vue'
-import VueCarousel from 'vue-carousel'
+import VueCarousel from 'vue-carousel/src/index'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component

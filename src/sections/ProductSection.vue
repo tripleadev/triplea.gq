@@ -2,6 +2,7 @@
   <div class="outerWrapper">
     <div class="productsWrapper">
       <h2 ref="text">Some of our products</h2>
+      <ClientOnly>
       <Carousel class="carousel" :perPage=1>
         <Slide class="slide">
           <g-link to="https://github.com/tripleadev/a.js">
@@ -19,6 +20,7 @@
           </g-link>
         </Slide>
       </Carousel>
+      </ClientOnly>
       <div class="cardContainer">
         <g-link to="https://github.com/tripleadev/a.js">
           <ProductCard name="a.js" :description="descriptions[0]"/>
@@ -35,7 +37,6 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel'
 import ProductCard from '../components/ProductCard.vue'
 import { TimelineLite, Power1 } from 'gsap'
 import { ScrollScene } from 'scrollscene'
@@ -43,8 +44,14 @@ import { ScrollScene } from 'scrollscene'
 export default {
   name: 'ProductSection',
   components: {
-    Carousel,
-    Slide,
+    Carousel: () =>
+        import ('vue-carousel')
+        .then(m => m.Carousel)
+        .catch(),
+      Slide: () =>
+        import ('vue-carousel')
+        .then(m => m.Slide)
+        .catch(),
     ProductCard,
   },
   data() {
