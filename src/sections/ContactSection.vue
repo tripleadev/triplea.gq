@@ -143,7 +143,7 @@ export default {
 
     h1 {
       color: white;
-      font-size: 2.5em;
+      font-size: 2.3em;
     }
   }
 
@@ -152,4 +152,56 @@ export default {
     display: flex;
     flex-direction: column;
   }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    input, textarea {
+      font-family: inherit;
+      margin-top: 5px;
+      width: 250px;
+      padding: 10px;
+      position: relative;
+      border: none;
+      border-radius: 4px;
+
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+
+      transition: box-shadow .3s ease;
+
+      &:focus {
+        box-shadow: #53ba53 0px 0px 0px 4px;
+      }
+    }
+  }
+
+  button {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 250px;
+    padding: 10px;
+    position: relative;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition: box-shadow .3s ease;
+
+    &:hover {
+      box-shadow: #53ba53 0px 0px 0px 4px;
+    }
+
+  }
+
 </style>
