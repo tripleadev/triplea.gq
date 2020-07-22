@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@400;600;800&display=swap');
+
+p, span {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: var(--theme);
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: unset;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    font-size: .8rem;
+  }
+}

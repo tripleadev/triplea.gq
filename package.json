@@ -1,0 +1,22 @@
+{
+  "name": "triplea.gq",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "gsap": "^3.3.4",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "scrollmagic": "^2.0.7",
+    "scrollscene": "0.0.20",
+    "vue-carousel": "^0.18.0",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "vue-svg-loader": "^0.16.0"
+  }
+}
