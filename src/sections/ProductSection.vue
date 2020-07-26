@@ -1,7 +1,7 @@
 <template>
   <div class="outerWrapper">
     <div class="productsWrapper">
-      <h2 ref="text">Some of our products</h2>
+      <h2 class="text">Some of our products</h2>
       <ClientOnly>
       <Carousel class="carousel" :perPage=1>
         <Slide class="slide">
@@ -64,12 +64,12 @@ export default {
     }
   },
   mounted() {
-    const { text } = this.$refs;
+    const text = document.querySelector('.text');
     const tl = new TimelineLite({ paused: true });
 
     tl.fromTo(text, 0.8,
-      {y: -100, opacity: 0},
-      {y: 0, opacity: 1, delay: 0.4, ease: Power1.easeInOut}
+      {y: -100, autoAlpha: 0},
+      {y: 0, autoAlpha: 1, delay: 0.4, ease: Power1.easeInOut}
     );
 
     const scrollScene = new ScrollScene({
@@ -83,16 +83,16 @@ export default {
     const tl2 = new TimelineLite({ paused: true });
 
     tl2.fromTo(boxes[0], 0.8,
-      {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: 150, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, ease: Power1.easeInOut}
     )
     .fromTo(boxes[1], 0.8,
-      {x: -150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: -150, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, ease: Power1.easeInOut}
     )
     .fromTo(boxes[2], 0.8,
-      {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: 150, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, ease: Power1.easeInOut}
     );
 
     const scrollScene2 = new ScrollScene({
@@ -102,20 +102,20 @@ export default {
       },
     });
 
-    const carousel = document.querySelector('.carousel')
+    const carousel = document.querySelector('.carousel');
     const tl3 = new TimelineLite({ paused: true });
 
     tl3.fromTo(carousel, 0.8,
-      {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
-    )
+      {x: 150, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, ease: Power1.easeInOut}
+    );
 
     const scrollScene3 = new ScrollScene({
       triggerElement: carousel,
       gsap: {
         timeline: tl3,
       },
-    })
+    });
   },
 }
 </script>
