@@ -3,7 +3,7 @@
     <g-link to="https://github.com/tripleadev">
       <g-image src="~/favicon.png" class="icon"></g-image>
     </g-link>
-    <div class="content" ref="text">
+    <div class="content title">
       <h2>High performance software on-demand</h2>
       <p>We would love to figure out your problems by creating software tailored to you.</p>
     </div>
@@ -16,6 +16,8 @@
 <script>
 import CodeSVG from '../assets/images/code-inspection.svg'
 import { TimelineLite, Power1 } from 'gsap'
+import { gsap, CSSPlugin } from 'gsap/all'
+gsap.registerPlugin(CSSPlugin)
 
 export default {
   name: 'WelcomeSection',
@@ -23,23 +25,23 @@ export default {
     CodeSVG,
   },
   mounted() {
-    const { text } = this.$refs;
-    const screen = document.querySelector('#screen')
-    const man = document.querySelector('#man')
-    const tl = new TimelineLite()
+    const title = document.querySelector('.title');
+    const screen = document.querySelector('#screen');
+    const man = document.querySelector('#man');
+    const tl = new TimelineLite();
 
-    tl.fromTo(text, 1.1,
-      {x: -100, opacity: 0},
-      {x: 0, opacity: 1, delay: 0.3, ease: Power1.easeInOut}
+    tl.fromTo(title, 1.1,
+      {x: -100, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, delay: 0.3, ease: Power1.easeInOut},
     )
     .fromTo(screen, 1,
-      {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
+      {x: 150, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, ease: Power1.easeInOut},
     )
     .fromTo(man, 1,
-      {x: 150, opacity: 0},
-      {x: 0, opacity: 1, ease: Power1.easeInOut}
-    )
+      {x: 150, autoAlpha: 0},
+      {x: 0, autoAlpha: 1, ease: Power1.easeInOut},
+    );
   },
 }
 </script>

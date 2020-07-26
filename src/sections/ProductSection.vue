@@ -38,8 +38,10 @@
 
 <script>
 import ProductCard from '../components/ProductCard.vue'
-import { TimelineLite, Power1 } from 'gsap'
 import { ScrollScene } from 'scrollscene'
+import { TimelineLite, Power1 } from 'gsap'
+import { gsap, CSSPlugin } from 'gsap/all'
+gsap.registerPlugin(CSSPlugin)
 
 export default {
   name: 'ProductSection',
